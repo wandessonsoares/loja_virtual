@@ -1,10 +1,11 @@
-require File.expand_path "livro.rb"
+require File.expand_path "requires.rb"
 
-livro = Livro.new "Wandesson Soares", 200, 29.90
-livro_2 = Livro.new "Walisson Soares", "21323", 213, 55.10
+biblioteca = Biblioteca.new 
 
-puts livro
+teste_e_design = Livro.new "Maurício Aniche", "123454", 247, 70.5
+web_design_responsivo = Livro.new "Tácio Zemel", "452565", 189, 67.9
 
-livro.preco = 39.90
+biblioteca.adiciona teste_e_design
+biblioteca.adiciona web_design_responsivo
 
-puts livro
+puts biblioteca.livros
